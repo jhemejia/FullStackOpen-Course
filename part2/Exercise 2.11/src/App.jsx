@@ -15,7 +15,7 @@ const App = () => {
   useEffect(()=>{
     Axios.get("http://localhost:3001/persons")
     .then((res)=>setPersons(res.data))
-  })
+  },[])
 
   //function to handle change
   const handleValueChange = (e) => {
