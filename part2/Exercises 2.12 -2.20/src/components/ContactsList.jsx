@@ -7,7 +7,7 @@ const ContactsList = ({persons, filter, handleDeletePerson}) => {
     <div>
       <h2>Numbers</h2>
       <ul>
-        {displayPersonsArray.map(person=>{
+        {displayPersonsArray?.map(person=>{
             if(person) return <li key={person.id} style={{display:"flex",width:"350px",alignContent:"start",justifyContent:"space-between"}}>{person.name}: {person.number} <button onClick={()=>handleDeletePerson(person)}>Delete</button></li>
         })}
       </ul>
